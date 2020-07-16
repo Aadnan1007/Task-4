@@ -74,7 +74,7 @@ resource "aws_instance" "wordpress_inst" {
     instance_type = "t2.micro"
     associate_public_ip_address = true
     subnet_id = "subnet-0a031cdad762e39d2"
-    key_name = "adnan1818"
+    key_name = "$EnterYorKey"
     vpc_security_group_ids = [ "sg-047f65e96e242ae70" ]
     tags = {
         Name = "Wordpress_Server"
@@ -163,7 +163,7 @@ resource "aws_instance" "batson_inst" {
     instance_type = "t2.micro"
     associate_public_ip_address = true
     subnet_id = "subnet-0a031cdad762e39d2"
-    key_name = "adnan1818"
+    key_name = "$EnterYorKey"
     vpc_security_group_ids = [ "sg-0e8b5465741b1c464" ]
     tags = {
         Name = "Batson_Instance"
@@ -175,7 +175,7 @@ resource "aws_instance" "mysql_inst" {
     instance_type = "t2.micro"
     associate_public_ip_address = true
     subnet_id = "subnet-0b971bd1891fab3e5"
-    key_name = "adnan1818"
+    key_name = "$EnterYorKey"
     vpc_security_group_ids = [ "sg-00554b09eaff6b6de" , "sg-0e8b5465741b1c464" ]
     depends_on = [
         aws_security_group.batsonsg
